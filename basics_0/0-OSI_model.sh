@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Answers 0. OSI model
 2
 2
