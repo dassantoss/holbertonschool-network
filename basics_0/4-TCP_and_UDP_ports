@@ -1,14 +1,3 @@
 #!/usr/bin/env bash
-
-# Display listening ports with PID and program name
-echo "Active Internet connections (only servers)"
-echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
-
-# Retrieve the listening sockets using ss
-ss -tlnp | awk 'NR > 1 {print}'
-
-echo "Active UNIX domain sockets (only servers)"
-echo "Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path"
-
-# Retrieve the listening UNIX domain sockets using ss
-ss -pln | awk 'NR > 1 {print}'
+# display TCP and UDP
+netstat -p
